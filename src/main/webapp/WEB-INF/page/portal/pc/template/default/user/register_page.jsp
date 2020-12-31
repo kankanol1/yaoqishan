@@ -38,7 +38,6 @@
 		<div class="register-title-con">
 			<div class="register-title-subcon">
 				<a href="${pageContext.request.contextPath}/portal/login_page.action" class="fr account-login"><font style="vertical-align: inherit;">账号登录</font></a>
-				<div class="qiyiLogo"><a href="${webInfo.domain}" class="tw-qiyiLogo-link"></a></div>
 			</div>
 		</div>
 		
@@ -48,7 +47,6 @@
 					<form id="form">
 						<div class="login-frame-ti">
 							<h2 class="login-title">用户注册</h2>
-							<p class="sub-title">注册过程需要验证邮箱，请注意</p>
 							<div class="info-container">
 								<p class="errorInfo vh"><span>账号错误</span></p>
 								<div class="tip-container tip-account-container">
@@ -77,7 +75,6 @@
 						</div>
 					</form>
 				</div>
-				
 				<div id="validate" class="login-frame-top" style="display:none;">
 					<div class="login-frame-ti">
 						<h2 class="login-title">用户激活</h2>
@@ -95,6 +92,7 @@
 						<a href="javascript:;" onclick="validate()" class="btn-green btn-login">激活</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -124,10 +122,11 @@
 					delCookie("userToken");
 					setCookie("UID", info.UID);
 					setCookie("userToken", info.userToken);
-					
-					$("#register").hide();
-					$("#validate").show();
-					sendEmail();
+					window.location.href = "${pageContext.request.contextPath}/portal/login_page.action";
+
+					// $("#register").hide();
+					// $("#validate").show();
+					// sendEmail();
 				} else {
 					javaex.optTip({
 						content : rtn.message,

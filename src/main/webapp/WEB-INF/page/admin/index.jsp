@@ -23,7 +23,7 @@
 		<div class="list-content">
 			<!--块元素-->
 			<div class="block">
-				<h2>妖气山视频管理系统</h2>
+				<h2>视频管理系统</h2>
 				<!--正文内容-->
 				<div class="main">
 					${info}

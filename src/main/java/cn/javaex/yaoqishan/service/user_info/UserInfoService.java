@@ -98,16 +98,16 @@ public class UserInfoService {
 
 	/**
 	 * 注册新用户
-	 * @param UserInfo
+	 * @param request
 	 * @return 
 	 * @throws QingException 
 	 */
-	public Map<String, Object> register(HttpServletRequest request) throws QingException {
+	public Map<String, Object> register(HttpServletRequest request) throws QingException,Exception {
 		// 1.0 获取注册参数
 		String szLoginName = request.getParameter("loginName");
 		String szPassWord = request.getParameter("passWord");
 		String szEmail = request.getParameter("email");
-		
+
 		// 2.0 校验注册信息
 		// 2.1 校验账号是否填写
 		if (StringUtils.isEmpty(szLoginName)) {
@@ -137,6 +137,7 @@ public class UserInfoService {
 		int count = 0;
 		// 2.6 校验账号是否已被占用
 		count = countUser(szLoginName, null);
+		System.out.println(iUserInfoDAO.count());
 		if (count>0) {
 			throw new QingException(ErrorMsg.ERROR_100009);
 		}
@@ -161,10 +162,14 @@ public class UserInfoService {
 		userInfo.setRegisterIp(szUserIp);
 		userInfo.setLastLoginTime(now);
 		userInfo.setLastLoginIp(szUserIp);
-		userInfo.setStatus("0");	// 账号未激活
-		
-		iUserInfoDAO.insert(userInfo);
-		
+		userInfo.setStatus("1");	// 账号激活
+		try	{
+			int a = iUserInfoDAO.insert(userInfo);
+			System.out.println("iUserInfoDAO:"+a);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
 		UserProfileInfo userProfileInfo = new UserProfileInfo();
 		userProfileInfo.setUserId(userInfo.getId());
 		userProfileInfo.setGroupId("2");	// 注册会员
@@ -213,7 +218,10 @@ public class UserInfoService {
 		if (StringUtils.isEmpty(szLoginName) || StringUtils.isEmpty(szPassWord)) {
 			throw new QingException(ErrorMsg.ERROR_100001);
 		}
-		
+
+		System.out.println(szLoginName);
+		System.out.println(szPassWord);
+		System.out.println(MD5.md5(szPassWord));
 		// 2.2 校验用户名、密码是否正确
 		UserInfo userInfo = selectUser(szLoginName, MD5.md5(szPassWord));
 		if (userInfo==null) {

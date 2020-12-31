@@ -1,5 +1,7 @@
 package cn.javaex.yaoqishan.view;
 
+import jdk.nashorn.internal.objects.annotations.Setter;
+
 /**
  * 用户登录注册表
  * 
@@ -114,4 +116,27 @@ public class UserInfo {
 		this.power = power;
 	}
 
+	public UserInfo() {
+	}
+
+	@Override
+	public String toString() {
+		return "UserInfo{" +
+				"id='" + id + '\'' +
+				", loginName='" + loginName + '\'' +
+				", passWord='" + passWord + '\'' +
+				", email='" + email + '\'' +
+				", registerTime='" + registerTime + '\'' +
+				", registerIp='" + registerIp + '\'' +
+				", lastLoginTime='" + lastLoginTime + '\'' +
+				", lastLoginIp='" + lastLoginIp + '\'' +
+				", status='" + status + '\'' +
+				", avatar='" + avatar + '\'' +
+				", signPersonal='" + signPersonal + '\'' +
+				", point=" + point +
+				", groupId='" + groupId + '\'' +
+				", groupName='" + groupName + '\'' +
+				", power='" + power + '\'' +
+				'}';
+	}
 }

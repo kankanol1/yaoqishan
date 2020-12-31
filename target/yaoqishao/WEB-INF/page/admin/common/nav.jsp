@@ -20,7 +20,7 @@
 <script src="${pageContext.request.contextPath}/static/default/javaex/pc/js/javaex-formVerify.js"></script>
 <!--顶部导航-->
 <div id="nav" class="admin-iframe-header">
-	<h1 class="logo"><a href="javascript:;">妖气山后台管理</a></h1>
+	<h1 class="logo"><a href="javascript:;">视频管理</a></h1>
 	<div class="admin-iframe-nav">
 		<ul class="navs">
 			<li class="nav active"><a href="${pageContext.request.contextPath}/admin/index.action">首页</a></li>

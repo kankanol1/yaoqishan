@@ -59,6 +59,7 @@ cn\javaex\yaoqishan\view\GroupInfo.class
 cn\javaex\yaoqishan\action\api\ApiAction.class
 cn\javaex\yaoqishan\dao\channel_info\IChannelInfoDAO.class
 cn\javaex\yaoqishan\view\SeoInfo.class
+cn\javaex\yaoqishan\action\audio_info\UploadFileController.class
 cn\javaex\yaoqishan\view\CommentInfo.class
 cn\javaex\yaoqishan\view\FieldInfo.class
 cn\javaex\yaoqishan\view\UserProfileInfo.class
@@ -89,13 +90,17 @@ cn\javaex\yaoqishan\dao\nav_info\INavInfoDAO.class
 cn\javaex\yaoqishan\dao\email_info\IEmailInfoDAO.class
 cn\javaex\yaoqishan\view\EmailInfo.class
 cn\javaex\yaoqishan\util\MD5.class
+cn\javaex\yaoqishan\view\AudioInfo.class
 cn\javaex\yaoqishan\task\Quartz.class
 cn\javaex\yaoqishan\service\tag_info\TagInfoService.class
 cn\javaex\yaoqishan\dao\collection_info\ICollectionInfoDAO.class
 cn\javaex\yaoqishan\view\NavInfo.class
+cn\javaex\yaoqishan\service\audio_info\AudioInfoService.class
 cn\javaex\yaoqishan\dao\star_info\IStarInfoDAO.class
 cn\javaex\yaoqishan\action\qiniu_info\QiniuInfoAction.class
+cn\javaex\yaoqishan\action\audio_info\AudioController.class
 cn\javaex\yaoqishan\dao\slide_info\ISlideInfoDAO.class
+cn\javaex\yaoqishan\dao\audio_info\IAudioInfoDAO.class
 cn\javaex\yaoqishan\view\StarInfo.class
 cn\javaex\yaoqishan\action\api_info\ApiInfoAction.class
 cn\javaex\yaoqishan\service\type_field\TypeFieldService.class
@@ -110,6 +115,7 @@ cn\javaex\yaoqishan\view\HistoryInfo.class
 cn\javaex\yaoqishan\action\type_info\TypeInfoAction.class
 cn\javaex\yaoqishan\view\TemplateInfo.class
 cn\javaex\yaoqishan\constant\FixedOption$Blood.class
+cn\javaex\yaoqishan\action\audio_info\AudioInfoAction.class
 cn\javaex\yaoqishan\action\user_profile_info\UserProfileInfoAction.class
 cn\javaex\yaoqishan\dao\history_info\IHistoryInfoDAO.class
 cn\javaex\yaoqishan\view\TypeInfo.class

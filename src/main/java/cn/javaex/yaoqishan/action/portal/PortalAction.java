@@ -1,10 +1,15 @@
 package cn.javaex.yaoqishan.action.portal;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import cn.javaex.yaoqishan.service.audio_info.AudioInfoService;
+import cn.javaex.yaoqishan.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -23,14 +28,7 @@ import cn.javaex.yaoqishan.service.type_info.TypeInfoService;
 import cn.javaex.yaoqishan.service.user_info.UserInfoService;
 import cn.javaex.yaoqishan.service.video_info.VideoInfoService;
 import cn.javaex.yaoqishan.service.web_info.WebInfoService;
-import cn.javaex.yaoqishan.view.ChannelInfo;
-import cn.javaex.yaoqishan.view.FieldInfo;
-import cn.javaex.yaoqishan.view.NavInfo;
-import cn.javaex.yaoqishan.view.SeoInfo;
-import cn.javaex.yaoqishan.view.TypeInfo;
-import cn.javaex.yaoqishan.view.UserInfo;
-import cn.javaex.yaoqishan.view.VideoInfo;
-import cn.javaex.yaoqishan.view.WebInfo;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("portal")
@@ -56,6 +54,8 @@ public class PortalAction {
 	private TemplateInfoService templateInfoService;
 	@Autowired
 	private TypeInfoService typeInfoService;
+	@Autowired
+	private AudioInfoService audioInfoService;
 	
 	/**
 	 * 跳转首页
@@ -108,7 +108,55 @@ public class PortalAction {
 		
 		return "portal/pc/template/" + templatePC + "/index";
 	}
-	
+
+	@RequestMapping("indexs.action")
+	public String indexs(ModelMap map, HttpServletRequest request) {
+		// 站点信息
+		WebInfo webInfo = webInfoService.select();
+		map.put("webInfo", webInfo);
+
+		// 网站首页seo
+		SeoInfo seoInfo = seoInfoService.selectByType("index");
+		map.put("seoInfo", seoInfo);
+
+		// 获取用户信息
+		UserInfo userInfo = userInfoService.getUserInfo(request);
+		map.put("userInfo", userInfo);
+
+		// 获取所选模板
+		String templatePC = templateInfoService.selectNameByType("pc");
+
+		// 获取可用导航
+		List<NavInfo> navlist = navInfoService.listIsUse();
+		map.put("navlist", navlist);
+
+		for (NavInfo navInfo : navlist) {
+			// 判断是否是首页
+			if ("1".equals(navInfo.getIsIndex())) {
+				// 判断该链接是否是系统内置的（或者是频道）
+				if ("system".equals(navInfo.getType())) {
+					// 系统默认首页
+					if ("portal/index.action".equals(navInfo.getLink())) {
+						map.put("active", navInfo.getLink());
+						return "portal/pc/template/" + templatePC + "/index";
+					} else {
+						// 频道
+						String channelId = navInfo.getChannelId();
+						map.put("active", "portal/portal.action?channelId="+channelId);
+						ChannelInfo channelInfo = channelInfoService.selectById(channelId);
+						return "portal/pc/template/" + templatePC + "/channel/" + channelInfo.getTemplate();
+					}
+				} else {
+					// 自定义链接
+					map.put("active", navInfo.getLink());
+					return "redirect:"+navInfo.getLink();
+				}
+			}
+		}
+
+		return "portal/pc/template/" + templatePC + "/indexs";
+	}
+
 	/**
 	 * 跳转频道页面
 	 * @return
@@ -218,7 +266,7 @@ public class PortalAction {
 	
 	/**
 	 * 跳转到媒体详情页面
-	 * @param videoId 视频主键
+	 * @param mediaId 视频主键
 	 * @return
 	 */
 	@RequestMapping("profile.action")
@@ -276,7 +324,7 @@ public class PortalAction {
 	
 	/**
 	 * 跳转到搜索结果页面
-	 * @param videoId 视频主键
+	 * @param keyWord 视频主键
 	 * @return
 	 */
 	@RequestMapping("search.action")
@@ -306,7 +354,7 @@ public class PortalAction {
 	
 	/**
 	 * 跳转到分类检索页面
-	 * @param videoId 视频主键
+	 * @param typeId 视频主键
 	 * @return
 	 */
 	@RequestMapping("list.action")
@@ -374,7 +422,134 @@ public class PortalAction {
 		
 		return "portal/pc/template/" + templatePC + "/user/register_page";
 	}
-	
+
+	/**
+	 * 跳转视频编译
+	 * @return
+	 */
+	@RequestMapping("audio.action")
+	public String audio(ModelMap map,HttpServletRequest request) {
+		// 站点信息
+		WebInfo webInfo = webInfoService.select();
+		map.put("webInfo", webInfo);
+		// 网站首页seo
+		SeoInfo seoInfo = seoInfoService.selectByType("index");
+		map.put("seoInfo", seoInfo);
+		// 获取用户信息
+		UserInfo userInfo = userInfoService.getUserInfo(request);
+		map.put("userInfo", userInfo);
+		// 获取所选模板
+		String templatePC = templateInfoService.selectNameByType("pc");
+
+		// 获取可用导航
+		List<NavInfo> navlist = navInfoService.listIsUse();
+		map.put("navlist", navlist);
+		return "portal/pc/template/" + templatePC + "/audio/audio";
+	}
+
+    @RequestMapping("edit.action")
+    public String edit(ModelMap map,
+                       HttpServletRequest request,
+                       @RequestParam(required=false, value="id") String id) {
+
+        // 站点信息
+        WebInfo webInfo = webInfoService.select();
+        map.put("webInfo", webInfo);
+        // 网站首页seo
+        SeoInfo seoInfo = seoInfoService.selectByType("index");
+        map.put("seoInfo", seoInfo);
+        // 获取用户信息
+        UserInfo userInfo = userInfoService.getUserInfo(request);
+        map.put("userInfo", userInfo);
+        // 获取所选模板
+        String templatePC = templateInfoService.selectNameByType("pc");
+
+        // 获取可用导航
+        List<NavInfo> navlist = navInfoService.listIsUse();
+        map.put("navlist", navlist);
+
+        AudioInfo audioInfo = audioInfoService.selectById(id);
+        map.put("audioInfo", audioInfo);
+
+        map.put("id", id);
+        // 获取所选模板
+        Map<String, String> templateMap = null;
+        List<Map<String, String>> templateList = new ArrayList<Map<String, String>>();
+
+        String path = request.getSession().getServletContext().getRealPath("/WEB-INF/page/portal/pc/template/"+templatePC+"/audio");
+
+        File file = new File(path);
+        // 获得该文件夹内的所有文件名
+        File[] arr = file.listFiles();
+        if (arr!=null && arr.length>0) {
+            for (int i=0; i<arr.length; i++) {
+                templateMap = new HashMap<String, String>();
+                // 获取文件夹名（即模板名称）
+                String templateName = arr[i].getName().replace(".jsp", "");
+
+                templateMap.put("value", templateName);
+                templateMap.put("name", templateName);
+                templateList.add(templateMap);
+            }
+        }
+        map.put("templateList", templateList);
+
+        return "portal/pc/template/" + templatePC + "/audio/edit";
+
+//        return "admin/audio_info/edit";
+    }
+
+	@RequestMapping("save.json")
+	@ResponseBody
+	public Result save(AudioInfo audioInfo) {
+
+		audioInfoService.save(audioInfo);
+		/*
+		 *
+		 * */
+
+		return Result.success();
+	}
+
+	/**
+	 * 删除频道
+	 */
+	@RequestMapping("delete.json")
+	@ResponseBody
+	public Result delete(
+			@RequestParam(required=false, value="id") String id) {
+		audioInfoService.delete(id);
+		return Result.success();
+	}
+    /**
+	 * 跳转结果集
+	 * @return
+	 */
+	@RequestMapping("results.action")
+	public String results(ModelMap map,HttpServletRequest request) {
+
+// 站点信息
+		WebInfo webInfo = webInfoService.select();
+		map.put("webInfo", webInfo);
+		// 网站首页seo
+		SeoInfo seoInfo = seoInfoService.selectByType("index");
+		map.put("seoInfo", seoInfo);
+		// 获取用户信息
+		UserInfo userInfo = userInfoService.getUserInfo(request);
+		map.put("userInfo", userInfo);
+		// 获取所选模板
+		String templatePC = templateInfoService.selectNameByType("pc");
+
+		// 获取可用导航
+		List<NavInfo> navlist = navInfoService.listIsUse();
+		map.put("navlist", navlist);
+		List<AudioInfo> list = audioInfoService.list();
+		map.put("list", list);
+
+
+		return "portal/pc/template/" + templatePC + "/audio/results";
+	}
+
 	/**
 	 * 打开登录弹出层
 	 * @return

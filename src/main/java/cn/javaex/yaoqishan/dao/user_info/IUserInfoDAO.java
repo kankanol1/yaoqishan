@@ -30,6 +30,7 @@ public interface IUserInfoDAO {
 	 * @param userInfo
 	 */
 	int insert(UserInfo userInfo);
+	int count();
 
 	/**
 	 * 根据主键查询用户信息

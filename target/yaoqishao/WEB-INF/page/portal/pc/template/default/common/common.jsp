@@ -7,6 +7,11 @@
 <link href="${pageContext.request.contextPath}/static/default/javaex/pc/css/common.css" rel="stylesheet" />
 <!--皮肤（缇娜）-->
 <link href="${pageContext.request.contextPath}/static/default/javaex/pc/css/skin/tina.css" rel="stylesheet" />
+<!--uploadcss-->
+<link href="${pageContext.request.contextPath}/static/default/webupload/webuploader.css" rel="stylesheet" />
+
+
+
 <!--jquery，请勿轻易修改版本-->
 <script src="${pageContext.request.contextPath}/static/default/javaex/pc/lib/jquery-1.7.2.min.js"></script>
 <!--全局动态修改-->
@@ -17,6 +22,8 @@
 <script src="${pageContext.request.contextPath}/static/default/javaex/pc/js/javaex-formVerify.js"></script>
 <!--cookie-->
 <script src="${pageContext.request.contextPath}/static/default/js/cookie.js"></script>
+<!--webUpload-->
+<script src="${pageContext.request.contextPath}/static/default/webupload/webuploader.js"></script>
 
 <style>
 	.equal-2 > li{position: relative;margin-bottom: 20px;}

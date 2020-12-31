@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<div class="footer-inner">
+<%--<div class="footer-inner">
 	<div class="footmenu">
 		<span class="pc-menu-only">
 			<a href="http://www.javaex.cn/" target="_blank" class="menu-item company-intro">网站介绍</a>
@@ -19,13 +19,13 @@
 		
 	</div>
 	<p class="copyright">Copyright © 2018 妖气山 All Rights Reserved</p>
-</div>
+</div>--%>
 
 <!--回到顶部-->
 <div class="alien">
-	<div class="feedback">
+<%--	<div class="feedback">
 		<a href="http://www.javaex.cn/" target="_blank"></a>
-	</div>
+	</div>--%>
 	<div id="goTopBtn">
 		<img width="29" height="65" src="${pageContext.request.contextPath}/static/default/images/goTopBtn.gif">
 	</div>

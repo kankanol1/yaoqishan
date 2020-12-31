@@ -24,7 +24,6 @@
 		<div class="register-title-con">
 			<div class="register-title-subcon">
 				<a href="${pageContext.request.contextPath}/portal/register.action" class="fr account-login"><font style="vertical-align: inherit;">用户注册</font></a>
-				<div class="qiyiLogo"><a href="${webInfo.domain}" class="tw-qiyiLogo-link"></a></div>
 			</div>
 		</div>
 		

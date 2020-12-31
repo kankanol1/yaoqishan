@@ -10,7 +10,21 @@
     <context:component-scan base-package="cn.javaex.yaoqishan"/>
 
     <!-- 启用注解驱动 -->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter" >
+                <property name = "supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=utf-8</value>
+                        <value>text/html;charset=utf-8</value>
+                        <!-- application 可以在任意 form 表单里面 enctype 属性默认找到 -->
+                        <value>application/x-www-form-urlencoded</value>
+                    </list>
+                </property>
+            </bean>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
     <!-- 处理静态资源 -->
     <mvc:default-servlet-handler/>
@@ -36,7 +50,9 @@
         <!-- 设置默认编码 -->
         <property name="defaultEncoding" value="utf-8"/>
         <!-- 上传文件总的大小最大为5M-->
-        <property name="maxUploadSize" value="5242440"/>
+<!--        <property name="maxUploadSize" value="5242440"/>-->
+        <property name="maxUploadSize" value="10485760000" />
+        <property name="maxInMemorySize" value="40960" />
     </bean>
 
     <!-- 自定义的全局异常处理器

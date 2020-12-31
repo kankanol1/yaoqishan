@@ -81,6 +81,8 @@ public class UserProfileInfoAction {
 		
 		// 将base64头像上传到七牛云
 		QiniuInfo qiniuInfo = qiniuInfoService.selectByType("touxiang");
+		System.out.println("avatar: "+ avatar);
+		System.out.println("qiniuInfo: "+qiniuInfo);
 		avatar = qiniuInfoService.uploadAvatar(avatar, qiniuInfo);
 		System.out.println(avatar);
 		

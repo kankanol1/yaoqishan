@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.javaex.yaoqishan.dao.audio_info.IAudioInfoDAO">
+
+    <!-- 建立sql查询结果字段与实体属性的映射关系 -->
+    <resultMap id="AudioInfoMap" type="cn.javaex.yaoqishan.view.AudioInfo">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="result" property="result"/>
+        <result column="images" property="images"/>
+        <result column="sort" property="sort"/>
+        <result column="template" property="template"/>
+        <result column="title" property="title"/>
+        <result column="keywords" property="keywords"/>
+        <result column="description" property="description"/>
+    </resultMap>
+
+    <!-- 查询视频列表 -->
+    <select id="list" resultMap="AudioInfoMap">
+		SELECT
+			*
+		FROM
+			audio_info
+		ORDER BY
+			sort
+	</select>
+
+    <!-- 根据主键查询视频信息 -->
+    <select id="selectById" resultMap="AudioInfoMap">
+		SELECT
+			*
+		FROM
+			audio_info
+		WHERE
+			id = #{id}
+	</select>
+
+    <!-- 插入新的视频 -->
+    <insert id="insert">
+        INSERT INTO audio_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name!=null and name!=''">name,</if>
+            <if test="url!=null and url!=''">url,</if>
+            <if test="result!=null and result!=''">result,</if>
+            <if test="images!=null and images!=''">images,</if>
+            <if test="sort!=null and sort!=''">sort,</if>
+            <if test="template!=null and template!=''">template,</if>
+            <if test="title!=null and title!=''">title,</if>
+            <if test="keywords!=null and keywords!=''">keywords,</if>
+            <if test="description!=null and description!=''">description,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name!=null and name!=''">#{name},</if>
+            <if test="url!=null and url!=''">#{url},</if>
+            <if test="result!=null and result!=''">#{result},</if>
+            <if test="images!=null and images!=''">#{images},</if>
+            <if test="sort!=null and sort!=''">#{sort},</if>
+            <if test="template!=null and template!=''">#{template},</if>
+            <if test="title!=null and title!=''">#{title},</if>
+            <if test="keywords!=null and keywords!=''">#{keywords},</if>
+            <if test="description!=null and description!=''">#{description},</if>
+        </trim>
+        <selectKey keyProperty="id" order="AFTER" resultType="String">
+            <!-- 得到刚insert到数据表中的记录的主键值，只适用于自增主键 -->
+            <!-- SELECT IDENT_CURRENT('audio_info') AS id-->
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+</insert>
+
+<!-- 更新视频 -->
+    <update id="update">
+        UPDATE audio_info
+        <set>
+            <if test="name!=null">name=#{name},</if>
+            <if test="url!=null">url=#{url},</if>
+            <if test="result!=null">result=#{result},</if>
+            <if test="images!=null">images=#{images},</if>
+            <if test="sort!=null">sort=#{sort},</if>
+            <if test="template!=null">template=#{template},</if>
+            <if test="title!=null">title=#{title},</if>
+            <if test="keywords!=null">keywords=#{keywords},</if>
+            <if test="description!=null">description=#{description},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除视频 -->
+    <delete id="delete">
+		DELETE FROM audio_info WHERE id = #{id}
+	</delete>
+</mapper>
