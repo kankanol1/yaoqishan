@@ -37,9 +37,9 @@
 
 
 	<!--底部-->
-	<div class="footer-wrap js-use-footer" >
+	<%--<div class="footer-wrap js-use-footer" >
 		<c:import url="common/footer.jsp"></c:import>
-	</div>
+	</div>--%>
 </body>
 <script>
 

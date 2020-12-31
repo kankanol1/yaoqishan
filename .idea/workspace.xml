@@ -7,318 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399d7f60-cf31-4ca2-8125-43df694a107e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/error/403.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/yaoqishan_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/yaoqishan_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_happy_dns_java_0_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_happy_dns_java_0_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_qiniu_java_sdk_7_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_qiniu_java_sdk_7_2_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_30.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_7_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/user_profile_info/UserProfileInfoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/user_profile_info/UserProfileInfoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/user_info/IUserInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/user_info/IUserInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/service/user_info/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/service/user_info/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/IUserInfoDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/IUserInfoDAO.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-quartz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-quartz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/admin/common/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/admin/common/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/login_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/login_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/register_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/user/register_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/pc/lib/jquery-1.7.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/pc/lib/jquery-1.7.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IActivateInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IApiInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IChannelInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ICollectionInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ICommentInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IEmailInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IFieldInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IFieldProfileInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IGroupInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IHistoryInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IMediaInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/INavInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IPlayerInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IQiniuInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IReplyInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ISeoInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ISlideInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IStarInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ITagInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ITemplateInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ITypeFieldDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/ITypeInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IUserInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IUserProfileInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IVideoInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IWebInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-quartz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IActivateInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IApiInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IChannelInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ICollectionInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ICommentInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IEmailInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IFieldInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IFieldProfileInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IGroupInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IHistoryInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IMediaInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/INavInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IPlayerInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IQiniuInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IReplyInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ISeoInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ISlideInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IStarInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ITagInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ITemplateInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ITypeFieldDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/ITypeInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IUserInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IUserProfileInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IVideoInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IWebInfoDAO.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/spring-quartz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/api_info/list_rank.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/api_info/list_slide.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/api_info/list_user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/api_info/rank_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/api_info/user_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/channel_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/channel_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/common/common.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/common/nav.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/email_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/field_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/field_profile_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/group_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/media_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/media_info/list_normal.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/media_info/list_recycle.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/api.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/basic.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/content.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/founder.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/layout.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/type.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/menu/user.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/nav_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/player_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/player_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/qiniu_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/seo_index/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/seo_list/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/seo_play/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/seo_profile/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/service/service.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/slide_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/star_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/star_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/template_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/type_field/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/type_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/user_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/user_info/list_ban.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/user_info/list_normal.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/user_info/list_not_active.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/video_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/video_info/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/video_info/video.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/admin/web_info/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/ad/ad1.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/ad/ad2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/channel/dongman.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/channel/movie.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/channel/tv.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/common/common.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/common/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/error/404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/list/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/play/dongman.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/play/movie.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/play/mv.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/play/tv.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/preview.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/profile/dongman.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/profile/movie.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/profile/tv.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/search/search.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/find_pwd.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/login_page.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/personal/accountset.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/personal/avatar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/user/register_page.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/css/loginreg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ad1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/akari.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/feedback_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/feedback_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/goTopBtn.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/gradient.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ico9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/kn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/loadnone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/login-test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/login-tn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/logo_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/ranking-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/search-blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/step-test9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/images/upload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/fonts/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/fonts/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/fonts/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/home_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/link-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/loading.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/more.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/user_small.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/wave1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/images/wave2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/js/flexible.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/js/javaex-formVerify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/js/javaex.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/m/lib/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/fonts/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/fonts/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/fonts/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/css/skin/tina.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/arrow-down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/arrow-left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/arrow-right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/arrow-up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/calendar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/date_color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/grey.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/images.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/javaex-loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/loading-white.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/max.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/min.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/rank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/revert.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/upAvatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/images/user.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/js/javaex-formVerify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/js/javaex.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/lib/jquery-1.7.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/js/cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/js/jquery.SuperSlide.2.1.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/favicon.ico" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -333,55 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4972">
-              <caret line="518" column="25" selection-start-line="518" selection-start-column="25" selection-end-line="518" selection-end-column="25" />
-              <folding>
-                <element signature="method#index#0;class#PortalAction#0" />
-                <element signature="docComment;method#portal#0;class#PortalAction#0" />
-                <element signature="method#portal#0;class#PortalAction#0" />
-                <element signature="docComment;method#play#0;class#PortalAction#0" />
-                <element signature="method#profile#0;class#PortalAction#0" />
-                <element signature="method#list#0;class#PortalAction#0" />
-                <element signature="docComment;method#register#0;class#PortalAction#0" />
-                <element signature="method#edit#0;class#PortalAction#0" />
-                <element signature="method#results#0;class#PortalAction#0" />
-                <element signature="method#login#0;class#PortalAction#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/admin/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/edit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1339">
-              <caret line="116" column="97" selection-start-line="116" selection-start-column="97" selection-end-line="116" selection-end-column="97" />
+            <state relative-caret-position="220">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -389,68 +37,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state relative-caret-position="-22">
+              <caret line="46" column="4" selection-start-line="46" selection-end-line="48" selection-end-column="10" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="132">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
-                <element signature="n#style#0;n#h1#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/header.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="620" column="27" selection-start-line="620" selection-start-column="27" selection-end-line="620" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/audio_info/IAudioInfoDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/IAudioInfoDAO.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -468,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>NavInfo</find>
       <find>iNavInfoDAO</find>
       <find>channe</find>
       <find>chann</find>
@@ -498,6 +102,7 @@
       <find>退出</find>
       <find>result</find>
       <find>url</find>
+      <find>images</find>
     </findStrings>
     <replaceStrings>
       <replace>sq_173cms</replace>
@@ -515,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/comment_info/ICommentInfoDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/email_info/IEmailInfoDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/field_info/IFieldInfoDAO.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/field_profile_info/IFieldProfileInfoDAO.xml" />
@@ -559,12 +163,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/IAudioInfoDAO.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" />
       </list>
     </option>
@@ -606,8 +211,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="139" />
-    <option name="y" value="44" />
+    <option name="x" value="8" />
+    <option name="y" value="69" />
     <option name="width" value="1365" />
     <option name="height" value="646" />
   </component>
@@ -639,121 +244,7 @@
               <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-              <item name="audio_info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-              <item name="channel_info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaoqishan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yaoqishan" type="b2602c69:ProjectViewProjectNode" />
@@ -1037,12 +528,12 @@
       <workItem from="1582886245385" duration="284000" />
       <workItem from="1582886570793" duration="4144000" />
       <workItem from="1582943105706" duration="6367000" />
-      <workItem from="1609259914972" duration="65498000" />
+      <workItem from="1609259914972" duration="66666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76293000" />
+    <option name="totallyTimeSpent" value="77461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,7 +545,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="506" y="151" width="1365" height="646" extended-state="0" />
+    <frame x="8" y="69" width="1365" height="646" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.27203065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1066,14 +558,14 @@
       <window_info id="Web" order="7" sideWeight="0.5011338" side_tool="true" weight="0.29019907" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32685512" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16601562" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24414062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44259566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899627" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32899627" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29858658" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.45898438" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32899627" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -1136,13 +628,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/common.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/field_info/FieldInfoAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1011">
@@ -1474,34 +959,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="620" column="27" selection-start-line="620" selection-start-column="27" selection-end-line="620" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1529,24 +990,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="66">
+            <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="220">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="46" column="4" selection-start-line="46" selection-end-line="48" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+        <state relative-caret-position="132">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#3;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

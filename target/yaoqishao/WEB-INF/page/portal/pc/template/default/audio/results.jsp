@@ -13,6 +13,19 @@
   <meta charset="utf-8">
   <title>结果集</title>
   <c:import url="../common/common.jsp"></c:import>
+  <style>
+    #images {
+
+    }
+    #images .image-item{
+      width: 200px;
+      height: 250px;
+      display: inline-block;
+    }
+    #images .image-item img{
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 <!--头部-->
@@ -65,8 +78,8 @@
                     <td>${entity.id}</td>
                     <td>${entity.name}</td>
                     <td><a href="${entity.url}" target="_blank" style="color:blue">${entity.url}</a></td>
-                    <td><a href="${entity.result}" download="result" target="_blank" style="color:blue">${entity.result}</a></td>
                     <td><button class="button blue" onclick="showImages('${entity.images}')">查看</button></td>
+                    <td><a href="${entity.result}" download="result" target="_blank" style="color:blue">${entity.result}</a></td>
                     <td>
                       <a href="${pageContext.request.contextPath}/portal/edit.action?id=${entity.id}">
                         <button class="button wathet"><span class="icon-edit-2"></span> 编辑</button>
@@ -82,18 +95,30 @@
         </div>
       </div>
     </div>
+    <div>
+      <h3>抽帧图片</h3>
+      <div id="images" style="padding: 10px">
+<%--        <div style="display: inline-block;padding: 10px"><img src="" alt=""></div>--%>
+      </div>
+    </div>
   </div>
 </div>
 
 <!--底部-->
-<div class="footer-wrap js-use-footer">
+<%--<div class="footer-wrap js-use-footer">
   <c:import url="../common/footer.jsp"></c:import>
-</div>
+</div>--%>
 
 
 <script>
-  function showImages(iamges){
-    console.log(iamges);
+  function showImages(params){
+    var imagesBox = document.getElementById("images");
+    var str = "";
+    var images = params.split(',');
+    for(var i=0;i<images.length;i++){
+      str+='<div class="image-item" style="display: inline-block;padding: 10px"><img src="'+images[i]+'" alt=""></div>';
+    }
+    imagesBox.innerHTML=str;
   }
   javaex.loading();
 
