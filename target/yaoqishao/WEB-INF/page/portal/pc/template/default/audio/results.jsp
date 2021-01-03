@@ -168,7 +168,12 @@
     model.style.display = str;
   }
 
+
   function showImages(params1,params2) {
+    if(params1.length===0 || params1.length===0){
+      alert("编译中，请稍候...")
+      return;
+    }
     var imagesBox = document.getElementById("images");
     var imagescBox = document.getElementById("imagesc");
     var str1 = "";
