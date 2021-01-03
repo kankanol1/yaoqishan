@@ -31,6 +31,7 @@ public interface IAudioInfoDAO {
 	 * @return
 	 */
 	AudioInfo selectById(String id);
+	AudioInfo selectByName(String name);
 
 	/**
 	 * 删除频道

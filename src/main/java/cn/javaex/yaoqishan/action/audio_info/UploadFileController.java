@@ -19,6 +19,10 @@ import javax.servlet.http.HttpServletResponse;
 import cn.javaex.yaoqishan.service.audio_info.AudioInfoService;
 import cn.javaex.yaoqishan.view.AudioInfo;
 import org.apache.log4j.Logger;
+import org.python.core.PyFunction;
+import org.python.core.PyInteger;
+import org.python.core.PyObject;
+import org.python.util.PythonInterpreter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,6 +49,8 @@ public class UploadFileController {
         this.log = Logger.getLogger(this.getClass());
     }
 
+
+
     @RequestMapping(value = "audio.json", method = RequestMethod.POST)
     public String upload(@RequestParam("file") MultipartFile files, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject json = new JSONObject();
@@ -55,24 +61,44 @@ public class UploadFileController {
         try {
             String name = files.getOriginalFilename();
             String path = this.getClass().getClassLoader().getResource("/").getPath();
-//
-            int index = path.indexOf("yaoqishan");
+
+            if(audioInfoService.selectByName("name")!=null){
+                json.put("msg","视频已经存在");
+                return JSONObject.toJSON(json).toString();
+            }
+
+
+                int index = path.indexOf("yaoqishan");
+
             path = path.substring(1, index + "yaoqishan".length()) + "/upload/";
+            String python =path.substring(1, index + "yaoqishan".length()) + "/python/";
             path = path + name;
+            System.out.println(path);
             File uploadFile = new File(path);
             files.transferTo(uploadFile);
             AudioInfo audioInfo =new AudioInfo();
-            audioInfo.setSort("1");
             audioInfo.setName(name);
             audioInfo.setTemplate("edit");
             audioInfo.setTitle(name);
+            audioInfo.setSort("1");
             audioInfo.setUrl(path);
             audioInfo.setResult(path);
             audioInfo.setKeywords(name);
             audioInfo.setDescription(name+"视频描述");
 
-            audioInfoService.save(audioInfo);
+            /*
+            *https://www.cnblogs.com/wuwuyong/p/10600749.html
+            *
+            * */
+            PythonInterpreter interpreter = new PythonInterpreter();
+            interpreter.execfile("F:\\java\\yaoqishan\\python\\test.py");
+            PyFunction pyFunction = interpreter.get("add", PyFunction.class);
+            int a = 5, b = 10;
+            //调用函数，如果函数需要参数，在Java中必须先将参数转化为对应的“Python类型”
+            PyObject pyobj = pyFunction.__call__(new PyInteger(a), new PyInteger(b));
+            System.out.println("the anwser is: " + pyobj);
 
+            audioInfoService.save(audioInfo);
             json.put("url", path);
         } catch (Exception e) {
             msg = "error";

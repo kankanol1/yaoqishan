@@ -36,6 +36,13 @@ public class AudioInfoService {
 		
 		return iAudioInfoDAO.selectById(id);
 	}
+	public AudioInfo selectByName(String name) {
+		if (StringUtils.isEmpty(name)) {
+			return null;
+		}
+
+		return iAudioInfoDAO.selectByName(name);
+	}
 
 	/**
 	 * 保存频道内容

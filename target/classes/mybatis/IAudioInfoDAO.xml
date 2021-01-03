@@ -37,6 +37,15 @@
 		WHERE
 			id = #{id}
 	</select>
+    <!-- 根据主键查询视频信息 -->
+    <select id="selectByName" resultMap="AudioInfoMap">
+		SELECT
+			*
+		FROM
+			audio_info
+		WHERE
+			id = #{name}
+	</select>
 
     <!-- 插入新的视频 -->
     <insert id="insert">
