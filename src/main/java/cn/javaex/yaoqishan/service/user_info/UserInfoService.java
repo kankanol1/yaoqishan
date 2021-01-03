@@ -66,7 +66,7 @@ public class UserInfoService {
 	private ICollectionInfoDAO iCollectionInfoDAO;
 	@Autowired
 	private IHistoryInfoDAO iHistoryInfoDAO;
-	
+
 	/**
 	 * 查询所有用户
 	 * @param param
@@ -75,7 +75,7 @@ public class UserInfoService {
 	public List<UserInfo> list(Map<String, Object> param) {
 		return iUserInfoDAO.list(param);
 	}
-	
+
 	/**
 	 * 校验用户登录
 	 * @param loginName 登录名
@@ -98,11 +98,11 @@ public class UserInfoService {
 
 	/**
 	 * 注册新用户
-	 * @param request
-	 * @return 
-	 * @throws QingException 
+	 * @param
+	 * @return
+	 * @throws QingException
 	 */
-	public Map<String, Object> register(HttpServletRequest request) throws QingException,Exception {
+	public Map<String, Object> register(HttpServletRequest request) throws QingException {
 		// 1.0 获取注册参数
 		String szLoginName = request.getParameter("loginName");
 		String szPassWord = request.getParameter("passWord");
@@ -118,7 +118,7 @@ public class UserInfoService {
 		if (szLoginName.length()<4 || szLoginName.length()>10) {
 			throw new QingException(ErrorMsg.ERROR_100005);
 		}
-		
+
 		// 2.3 校验密码是否填写
 		if (StringUtils.isEmpty(szPassWord)) {
 			throw new QingException(ErrorMsg.ERROR_100006);
@@ -128,16 +128,15 @@ public class UserInfoService {
 		if (szPassWord.length()<6 || szPassWord.length()>16) {
 			throw new QingException(ErrorMsg.ERROR_100007);
 		}
-		
+
 		// 2.5 校验邮箱是否填写
 		if (StringUtils.isEmpty(szEmail)) {
 			throw new QingException(ErrorMsg.ERROR_100008);
 		}
-		
+
 		int count = 0;
 		// 2.6 校验账号是否已被占用
 		count = countUser(szLoginName, null);
-		System.out.println(iUserInfoDAO.count());
 		if (count>0) {
 			throw new QingException(ErrorMsg.ERROR_100009);
 		}
@@ -147,13 +146,13 @@ public class UserInfoService {
 		if (count>0) {
 			throw new QingException(ErrorMsg.ERROR_100010);
 		}
-		
+
 		// 3.0 注册新用户
 		String szUserIp = GetIp.getIp(request);
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		UserInfo userInfo = new UserInfo();
 		userInfo.setLoginName(szLoginName);
 		userInfo.setPassWord(MD5.md5(szPassWord));
@@ -162,20 +161,16 @@ public class UserInfoService {
 		userInfo.setRegisterIp(szUserIp);
 		userInfo.setLastLoginTime(now);
 		userInfo.setLastLoginIp(szUserIp);
-		userInfo.setStatus("1");	// 账号激活
-		try	{
-			int a = iUserInfoDAO.insert(userInfo);
-			System.out.println("iUserInfoDAO:"+a);
-		}catch (Exception e){
-			e.printStackTrace();
-		}
+		userInfo.setStatus("0");	// 账号未激活
+
+		iUserInfoDAO.insert(userInfo);
 
 		UserProfileInfo userProfileInfo = new UserProfileInfo();
 		userProfileInfo.setUserId(userInfo.getId());
 		userProfileInfo.setGroupId("2");	// 注册会员
 		userProfileInfo.setPoint(0);		// 积分0份
 		iUserProfileInfoDAO.insert(userProfileInfo);
-		
+
 		// 4.0 对用户信息进行加密，用于cookie存储
 		// 用户id
 		String UID = userInfo.getId();
@@ -184,14 +179,14 @@ public class UserInfoService {
 		// 将用户名转为没有特殊字符的base64编码
 		BASE64Encoder encoder = new BASE64Encoder();
 		userToken = encoder.encode(userToken.getBytes());
-		
+
 		Map<String, Object> info = new HashMap<String, Object>();
 		info.put("UID", UID);
 		info.put("userToken", userToken);
-		
+
 		return info;
 	}
-	
+
 	/**
 	 * 根据主键查询用户信息
 	 * @param id
@@ -205,29 +200,26 @@ public class UserInfoService {
 	 * 用户登录
 	 * @param request
 	 * @return
-	 * @throws QingException 
-	 * @throws UnsupportedEncodingException 
+	 * @throws QingException
+	 * @throws UnsupportedEncodingException
 	 */
 	public Map<String, Object> login(HttpServletRequest request) throws QingException, UnsupportedEncodingException {
 		// 1.0 获取登录参数
 		String szLoginName = request.getParameter("loginName");
 		String szPassWord = request.getParameter("passWord");
-		
+
 		// 2.0 校验用户
 		// 2.1 校验用户名或密码是否填写
 		if (StringUtils.isEmpty(szLoginName) || StringUtils.isEmpty(szPassWord)) {
 			throw new QingException(ErrorMsg.ERROR_100001);
 		}
 
-		System.out.println(szLoginName);
-		System.out.println(szPassWord);
-		System.out.println(MD5.md5(szPassWord));
 		// 2.2 校验用户名、密码是否正确
 		UserInfo userInfo = selectUser(szLoginName, MD5.md5(szPassWord));
 		if (userInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_100002);
 		}
-		
+
 		// 2.3 校验用户是否正常
 		if ("0".equals(userInfo.getStatus())) {
 			throw new QingException(ErrorMsg.ERROR_100019);
@@ -235,10 +227,10 @@ public class UserInfoService {
 		if ("2".equals(userInfo.getStatus())) {
 			throw new QingException(ErrorMsg.ERROR_100003);
 		}
-		
+
 		// 3.0 将用户信息保存进session
 		request.getSession().setAttribute("userInfo", userInfo);
-		
+
 		// 4.0 对用户信息进行加密，用于cookie存储
 		// 用户id
 		String UID = userInfo.getId();
@@ -247,11 +239,11 @@ public class UserInfoService {
 		// 将用户名转为没有特殊字符的base64编码
 		BASE64Encoder encoder = new BASE64Encoder();
 		userToken = encoder.encode(userToken.getBytes());
-		
+
 		Map<String, Object> info = new HashMap<String, Object>();
 		info.put("UID", UID);
 		info.put("userToken", userToken);
-		
+
 		return info;
 	}
 
@@ -271,25 +263,25 @@ public class UserInfoService {
 		} catch (IOException e) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		String[] arr = userToken.split("&&");
 		if (arr.length<=1) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		// userToken解密
 		String szLoginName = Jiami.getInstance().decrypt(arr[0]);
 		String szPassWord = Jiami.getInstance().decrypt(arr[1]);
-		
+
 		// 根据主键查询用户信息
 		UserInfo userInfo = selectUser(szLoginName, MD5.md5(szPassWord));
 		if (userInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		return userInfo;
 	}
-	
+
 	/**
 	 * 根据userToken，自动登录
 	 * @param userToken
@@ -306,16 +298,16 @@ public class UserInfoService {
 		} catch (IOException e) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		String[] arr = userToken.split("&&");
 		if (arr.length<=1) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		// userToken解密
 		String szLoginName = Jiami.getInstance().decrypt(arr[0]);
 		String szPassWord = Jiami.getInstance().decrypt(arr[1]);
-		
+
 		// 根据主键查询用户信息
 		UserInfo userInfo = selectUser(szLoginName, MD5.md5(szPassWord));
 		if (userInfo==null) {
@@ -328,7 +320,7 @@ public class UserInfoService {
 		if ("2".equals(userInfo.getStatus())) {
 			throw new QingException(ErrorMsg.ERROR_100003);
 		}
-		
+
 		return userInfo;
 	}
 
@@ -336,13 +328,13 @@ public class UserInfoService {
 	 * 根据token获取用户权限
 	 * @param token
 	 * @return
-	 * @throws QingException 
+	 * @throws QingException
 	 */
 	public String getUserPower(String token) throws QingException {
 		if (StringUtils.isEmpty(token)) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		String[] arr = token.split("&&");
 		if (arr.length<=1) {
 			throw new QingException(ErrorMsg.ERROR_100012);
@@ -355,10 +347,10 @@ public class UserInfoService {
 		if (userInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_100012);
 		}
-		
+
 		// 用户权限
 		String power = groupInfoService.selectPowerByUserId(userInfo.getId());
-		
+
 		return power;
 	}
 
@@ -377,7 +369,7 @@ public class UserInfoService {
 	public void batchChangeGroup(Map<String, Object> param) {
 		iUserProfileInfoDAO.batchUpdate(param);
 	}
-	
+
 	/**
 	 * 页面一加载就获取用户信息
 	 * @param request
@@ -399,13 +391,13 @@ public class UserInfoService {
 				}
 			}
 		}
-		
+
 		if (!StringUtils.isEmpty(userToken)) {
 			// 判断session
 			HttpSession session  = request.getSession();
 			// 从session中取出用户身份信息
 			UserInfo userInfo = (UserInfo)session.getAttribute("userInfo");
-			
+
 			if (userInfo==null) {
 				try {
 					userInfo = getUserInfoByUserToken(userToken);
@@ -416,10 +408,10 @@ public class UserInfoService {
 					return null;
 				}
 			}
-			
+
 			return userInfo;
 		}
-		
+
 		return null;
 	}
 
@@ -442,14 +434,14 @@ public class UserInfoService {
 		// 获取站点信息
 		WebInfo webInfo = iWebInfoDAO.select();
 		String webName = webInfo.getName();
-		
+
 		// 获取当前系统时间
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		String verificationCode = String.valueOf((int)((Math.random()*9+1)*100000));
-		
+
 		// 生成邮件内容
 		StringBuffer content = new StringBuffer();
 		content.append("<div style='background:#f7f7f7;overflow:hidden'>");
@@ -467,17 +459,17 @@ public class UserInfoService {
 		content.append("<p style='margin:0;padding:0;line-height:30px;font-size:14px;color:#333;font-family:'宋体',arial,sans-serif'>"+now+"</p>");
 		content.append("</div>");
 		content.append("</div>");
-		
+
 		// 发送验证码邮件
 		emailInfoService.sendEmail(userInfo.getEmail(), subject, content.toString());
-		
+
 		// 生成验证码有效期
 		ActivateInfo activateInfo = new ActivateInfo();
 		activateInfo.setUserId(userInfo.getId());
 		activateInfo.setType(type);	// 用户修改邮箱
 		activateInfo.setCode(verificationCode);
 		activateInfo.setCreateTime(now);
-		
+
 		activateInfoService.save(activateInfo);
 	}
 
@@ -486,7 +478,7 @@ public class UserInfoService {
 	 * @param userInfo
 	 * @param identifyingCode 验证码
 	 * @throws QingException
-	 * @throws ParseException 
+	 * @throws ParseException
 	 */
 	public void changeEmail(UserInfo userInfo, String identifyingCode) throws QingException, ParseException {
 		// 1.0 验证新邮箱是否已经被占用
@@ -494,26 +486,26 @@ public class UserInfoService {
 		if (count>0) {
 			throw new QingException(ErrorMsg.ERROR_100017);
 		}
-		
+
 		// 2.0 获取验证记录
 		ActivateInfo activateInfo = iActivateInfoDAO.selectByUserIdAndType(userInfo.getId(), "change_email");
 		if (activateInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_X00002);
 		}
-		
+
 		// 3.0 校验
 		// 3.1 校验验证码是否正确
 		if (!identifyingCode.equals(activateInfo.getCode())) {
 			throw new QingException(ErrorMsg.ERROR_100014);
 		}
-		
+
 		// 3.2 校验验证码是否已过期
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+
 		Date d1 = df.parse(now);
 		Date d2 = df.parse(activateInfo.getCreateTime());
 		long diff = d1.getTime() - d2.getTime();
@@ -523,13 +515,13 @@ public class UserInfoService {
 		if (hours>0) {
 			throw new QingException(ErrorMsg.ERROR_100015);
 		}
-		
+
 		// 4.0 修改用户邮箱
 		iUserInfoDAO.update(userInfo);
-		
+
 		// 5.0 删除验证记录
 		iActivateInfoDAO.delete(activateInfo.getId());
-		
+
 	}
 
 	/**
@@ -545,20 +537,20 @@ public class UserInfoService {
 		if (activateInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_X00002);
 		}
-		
+
 		// 2.0 校验
 		// 2.1 校验验证码是否正确
 		if (!identifyingCode.equals(activateInfo.getCode())) {
 			throw new QingException(ErrorMsg.ERROR_100014);
 		}
-		
+
 		// 2.2 校验验证码是否已过期
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+
 		Date d1 = df.parse(now);
 		Date d2 = df.parse(activateInfo.getCreateTime());
 		long diff = d1.getTime() - d2.getTime();
@@ -568,10 +560,10 @@ public class UserInfoService {
 		if (hours>0) {
 			throw new QingException(ErrorMsg.ERROR_100015);
 		}
-		
+
 		// 3.0 修改用户状态
 		iUserInfoDAO.update(userInfo);
-		
+
 		// 4.0 删除验证记录
 		iActivateInfoDAO.delete(activateInfo.getId());
 	}
@@ -579,20 +571,20 @@ public class UserInfoService {
 	/**
 	 * 用户找回密码，发送邮箱验证码
 	 * @param email 用户填写的邮箱地址
-	 * @throws QingException 
+	 * @throws QingException
 	 */
 	public void findPwdEmail(String email) throws QingException {
-		
+
 		if (StringUtils.isEmpty(email)) {
 			throw new QingException(ErrorMsg.ERROR_100008);
 		}
-		
+
 		// 校验邮箱是否存在
 		UserInfo userInfo = iUserInfoDAO.selectUserByEmail(email);
 		if (userInfo==null) {
 			throw new QingException(ErrorMsg.ERROR_100018);
 		}
-		
+
 		sendEmail(userInfo, "找回密码验证", "find_pwd");
 	}
 
@@ -614,9 +606,9 @@ public class UserInfoService {
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+
 		Date d1 = df.parse(now);
 		Date d2 = df.parse(activateInfo.getCreateTime());
 		long diff = d1.getTime() - d2.getTime();
@@ -640,12 +632,12 @@ public class UserInfoService {
 		if (StringUtils.isEmpty(passWord)) {
 			throw new QingException(ErrorMsg.ERROR_100006);
 		}
-		
+
 		passWord = passWord.replaceAll("\\s*", "");
 		if (passWord.length()<6 || passWord.length()>16) {
 			throw new QingException(ErrorMsg.ERROR_100007);
 		}
-		
+
 		// 获取用户id
 		ActivateInfo activateInfo = iActivateInfoDAO.selectByEmailAndCodeAndType(email, identifyingCode, "find_pwd");
 		if (activateInfo==null) {
@@ -655,9 +647,9 @@ public class UserInfoService {
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String now = formatter.format(currentTime);
-		
+
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+
 		Date d1 = df.parse(now);
 		Date d2 = df.parse(activateInfo.getCreateTime());
 		long diff = d1.getTime() - d2.getTime();
@@ -665,11 +657,11 @@ public class UserInfoService {
 		if (hours>0) {
 			throw new QingException(ErrorMsg.ERROR_100015);
 		}
-		
+
 		UserInfo userInfo = new UserInfo();
 		userInfo.setId(activateInfo.getUserId());
 		userInfo.setPassWord(MD5.md5(passWord));
-		
+
 		iUserInfoDAO.update(userInfo);
 	}
 
@@ -694,7 +686,7 @@ public class UserInfoService {
 			String szLoginName = userInfo.getLoginName();
 			String szPassWord = userInfo.getPassWord();
 			String szEmail = userInfo.getEmail();
-			
+
 			// 2.0 校验注册信息
 			// 2.1 校验账号是否填写
 			if (StringUtils.isEmpty(szLoginName)) {
@@ -705,7 +697,7 @@ public class UserInfoService {
 			if (szLoginName.length()<4 || szLoginName.length()>10) {
 				throw new QingException(ErrorMsg.ERROR_100005);
 			}
-			
+
 			// 2.3 校验密码是否填写
 			if (StringUtils.isEmpty(szPassWord)) {
 				throw new QingException(ErrorMsg.ERROR_100006);
@@ -715,12 +707,12 @@ public class UserInfoService {
 			if (szPassWord.length()<6 || szPassWord.length()>16) {
 				throw new QingException(ErrorMsg.ERROR_100007);
 			}
-			
+
 			// 2.5 校验邮箱是否填写
 			if (StringUtils.isEmpty(szEmail)) {
 				throw new QingException(ErrorMsg.ERROR_100008);
 			}
-			
+
 			int count = 0;
 			// 2.6 校验账号是否已被占用
 			count = countUser(szLoginName, null);
@@ -733,35 +725,35 @@ public class UserInfoService {
 			if (count>0) {
 				throw new QingException(ErrorMsg.ERROR_100010);
 			}
-			
+
 			// 3.0 注册新用户
 			// 获取当前时间
 			Date currentTime = new Date();
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			String now = formatter.format(currentTime);
-			
+
 			// 注册时间
 			if (StringUtils.isEmpty(userInfo.getRegisterTime())) {
 				userInfo.setRegisterTime(now);
 			}
-			
+
 			// 上次访问时间
 			if (StringUtils.isEmpty(userInfo.getLastLoginTime())) {
 				userInfo.setLastLoginTime(now);
 			}
-			
+
 			userInfo.setPassWord(MD5.md5(szPassWord));	// 密码加密
 			userInfo.setStatus("1");	// 正常状态
-			
+
 			iUserInfoDAO.insert(userInfo);
-			
+
 			UserProfileInfo userProfileInfo = new UserProfileInfo();
 			userProfileInfo.setUserId(userInfo.getId());
 			userProfileInfo.setAvatar(userInfo.getAvatar());
 			userProfileInfo.setGroupId(userInfo.getGroupId());
 			userProfileInfo.setSignPersonal(userInfo.getSignPersonal());
 			userProfileInfo.setPoint(userInfo.getPoint());
-			
+
 			iUserProfileInfoDAO.insert(userProfileInfo);
 		} else {
 			// 编辑
@@ -769,14 +761,14 @@ public class UserInfoService {
 				userInfo.setPassWord(MD5.md5(userInfo.getPassWord()));	// 密码加密
 				iUserInfoDAO.update(userInfo);
 			}
-			
+
 			UserProfileInfo userProfileInfo = new UserProfileInfo();
 			userProfileInfo.setUserId(userInfo.getId());
 			userProfileInfo.setAvatar(userInfo.getAvatar());
 			userProfileInfo.setGroupId(userInfo.getGroupId());
 			userProfileInfo.setSignPersonal(userInfo.getSignPersonal());
 			userProfileInfo.setPoint(userInfo.getPoint());
-			
+
 			iUserProfileInfoDAO.update(userProfileInfo);
 		}
 	}

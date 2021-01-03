@@ -122,11 +122,11 @@
 					delCookie("userToken");
 					setCookie("UID", info.UID);
 					setCookie("userToken", info.userToken);
-					window.location.href = "${pageContext.request.contextPath}/portal/login_page.action";
+					<%--window.location.href = "${pageContext.request.contextPath}/portal/login_page.action";--%>
 
-					// $("#register").hide();
-					// $("#validate").show();
-					// sendEmail();
+					$("#register").hide();
+					$("#validate").show();
+					sendEmail();
 				} else {
 					javaex.optTip({
 						content : rtn.message,

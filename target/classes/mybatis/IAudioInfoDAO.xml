@@ -10,6 +10,7 @@
         <result column="url" property="url"/>
         <result column="result" property="result"/>
         <result column="images" property="images"/>
+        <result column="imagesc" property="imagesc"/>
         <result column="sort" property="sort"/>
         <result column="template" property="template"/>
         <result column="title" property="title"/>
@@ -45,6 +46,7 @@
             <if test="url!=null and url!=''">url,</if>
             <if test="result!=null and result!=''">result,</if>
             <if test="images!=null and images!=''">images,</if>
+            <if test="imagesc!=null and imagesc!=''">imagesc,</if>
             <if test="sort!=null and sort!=''">sort,</if>
             <if test="template!=null and template!=''">template,</if>
             <if test="title!=null and title!=''">title,</if>
@@ -56,6 +58,7 @@
             <if test="url!=null and url!=''">#{url},</if>
             <if test="result!=null and result!=''">#{result},</if>
             <if test="images!=null and images!=''">#{images},</if>
+            <if test="imagesc!=null and imagesc!=''">#{imagesc},</if>
             <if test="sort!=null and sort!=''">#{sort},</if>
             <if test="template!=null and template!=''">#{template},</if>
             <if test="title!=null and title!=''">#{title},</if>
@@ -77,6 +80,7 @@
             <if test="url!=null">url=#{url},</if>
             <if test="result!=null">result=#{result},</if>
             <if test="images!=null">images=#{images},</if>
+            <if test="imagesc!=null">imagesc=#{imagesc},</if>
             <if test="sort!=null">sort=#{sort},</if>
             <if test="template!=null">template=#{template},</if>
             <if test="title!=null">title=#{title},</if>

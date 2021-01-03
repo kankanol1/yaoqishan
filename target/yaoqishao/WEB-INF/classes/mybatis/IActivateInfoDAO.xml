@@ -38,6 +38,9 @@
             <if test="code!=null and code!=''">#{code},</if>
             <if test="createTime!=null and createTime!=''">#{createTime},</if>
         </trim>
+        <selectKey keyProperty="id" order="AFTER" resultType="String">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
     </insert>
 
     <!-- 更新 -->

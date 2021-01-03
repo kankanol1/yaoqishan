@@ -534,10 +534,10 @@
               <li id="im-list-box" class="menu-item">
                 <a href="javascript:;" class="title">系统</a>
                 <div class="im-list-box">
-                  <c:if test="${userInfo.groupName=='管理员'}">
+                  <%--<c:if test="${userInfo.groupName=='管理员'}">
                     <a class="im-list" href="${pageContext.request.contextPath}/admin/index.action"
                        target="_blank">后台管理</a>
-                  </c:if>
+                  </c:if>--%>
                   <a class="im-list" href="${pageContext.request.contextPath}/portal/user_info/accountset.action"
                      target="_blank">个人设置</a>
                   <a class="im-list" href="javascript:;" onclick="logout()">退出账号</a>

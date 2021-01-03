@@ -14,17 +14,55 @@
   <title>结果集</title>
   <c:import url="../common/common.jsp"></c:import>
   <style>
-    #images {
+    .box-images {
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+      overflow: auto;
+      height: calc(100% - 50px);
+      border: 1px solid #eeeeee;
+    }
+    .box-title{
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+    }
 
+    #images,
+    #imagesc {
+      margin: 0 5px;
+      width: 50%;
     }
-    #images .image-item{
-      width: 200px;
-      height: 250px;
-      display: inline-block;
-    }
-    #images .image-item img{
+
+    #images .image-item,
+    #imagesc .image-item {
       width: 100%;
       height: 100%;
+      padding: 10px 0;
+      display: inline-block;
+    }
+
+    #images .image-item img,
+    #imagesc .image-item img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #model {
+      height: 80%;
+      display: none;
+      padding: 20px;
+      box-shadow: 0 0 8px 1px #e4e5e6;
+      z-index: 10000;
+      position: fixed;
+      top: 60px;
+      background-color: #ffffff;
+      margin: 0 20px;
+    }
+    #close-button{
+      position: absolute;
+      right: 20px;
+      top: 20px;
     }
   </style>
 </head>
@@ -47,22 +85,22 @@
         <!--正文内容-->
         <div class="main">
           <!--表格上方的操作元素，添加、删除-->
-         <%-- <div class="operation-wrap">
-            <div class="buttons-wrap">
-              <a href="edit.action">
-              <button class="button blue"><span class="icon-plus"></span> 添加</button>
-              </a>
-          </div>--%>
+          <%-- <div class="operation-wrap">
+             <div class="buttons-wrap">
+               <a href="edit.action">
+               <button class="button blue"><span class="icon-plus"></span> 添加</button>
+               </a>
+           </div>--%>
           <!--class加上color可以实现隔行变色-->
           <!--color1表示奇数行着色、color2表示偶数行着色-->
-          <table id="table" class="table">
+          <table id="table" class="table" style="text-align: center">
             <thead>
             <tr>
               <th style="width:10%;">编号</th>
               <th>名称</th>
-              <th>视频</th>
-              <th>图片</th>
-              <th>结果集</th>
+              <th>视频查看</th>
+              <th>图片对比</th>
+              <th>结果集下载</th>
               <th style="width:20%;">操作</th>
             </tr>
             </thead>
@@ -74,18 +112,22 @@
                 </tr>
               </c:when>
               <c:otherwise>
-                <c:forEach items="${list}" var="entity" varStatus="status" >
+                <c:forEach items="${list}" var="entity" varStatus="status">
                   <tr>
                     <td>${entity.id}</td>
                     <td>${entity.name}</td>
-                    <td><a href="${entity.url}" target="_blank" style="color:blue">${entity.url}</a></td>
-                    <td><button class="button blue" onclick="showImages('${entity.images}')">查看</button></td>
-                    <td><a href="${entity.result}" download="result" target="_blank" style="color:blue">${entity.result}</a></td>
+                    <td><a href="${entity.url}" target="_blank" style="color:blue">查看</a></td>
+                    <td>
+                      <button class="button blue" onclick="showImages('${entity.images}','${entity.imagesc}')">对比</button>
+                    </td>
+                    <td><a href="${entity.result}" download="result" target="_blank" style="color:blue">下载</a></td>
                     <td>
                       <a href="${pageContext.request.contextPath}/portal/edit.action?id=${entity.id}">
                         <button class="button wathet"><span class="icon-edit-2"></span> 编辑</button>
                       </a>
-                      <button class="button wathet" onclick="deleteById(this, '${entity.id}')"><span class="icon-trash-can2"></span> 删除</button>
+                      <button class="button wathet" onclick="deleteById(this, '${entity.id}')"><span
+                              class="icon-trash-can2"></span> 删除
+                      </button>
                     </td>
                   </tr>
                 </c:forEach>
@@ -96,10 +138,19 @@
         </div>
       </div>
     </div>
-    <div>
-      <h3>抽帧图片</h3>
-      <div id="images" style="padding: 10px">
-<%--        <div style="display: inline-block;padding: 10px"><img src="" alt=""></div>--%>
+    <div class="list-content" id="model">
+      <div style="margin:0 20px 20px 20px;text-align: center">
+        <div class="box-title">
+            <h2>抽帧图片</h2>
+            <h2>编译图片</h2>
+        </div>
+          <button class="button blue" onclick="closeModel('none')"
+                  id="close-button">关闭
+          </button>
+      </div>
+      <div class="box-images">
+          <div id="images"></div>
+          <div id="imagesc"></div>
       </div>
     </div>
   </div>
@@ -112,59 +163,73 @@
 
 
 <script>
-  function showImages(params){
-    var imagesBox = document.getElementById("images");
-    var str = "";
-    var images = params.split(',');
-    for(var i=0;i<images.length;i++){
-      str+='<div class="image-item" style="display: inline-block;padding: 10px"><img src="'+images[i]+'" alt=""></div>';
-    }
-    imagesBox.innerHTML=str;
+  function closeModel(str) {
+    var model = document.getElementById("model");
+    model.style.display = str;
   }
+
+  function showImages(params1,params2) {
+    var imagesBox = document.getElementById("images");
+    var imagescBox = document.getElementById("imagesc");
+    var str1 = "";
+    var str2 = "";
+    var images = params1.split(',');
+    var imagesc = params2.split(',');
+    for (var i = 0; i < images.length; i++) {
+      str1 += '<div class="image-item" style="display: inline-block"><img src="' + images[i] + '" alt=""></div>';
+    }
+    for (var j = 0; j < imagesc.length; j++) {
+      str2 += '<div class="image-item" style="display: inline-block"><img src="' + imagesc[j] + '" alt=""></div>';
+    }
+    imagesBox.innerHTML = str1;
+    imagescBox.innerHTML = str2;
+    closeModel("block");
+  }
+
   javaex.loading();
 
   function deleteById(obj, id) {
     javaex.deleteDialog(
       obj,	// obj是必须的
       {
-        content : "确定要删除么",
-        callback : "callback("+id+")"
+        content: "确定要删除么",
+        callback: "callback(" + id + ")"
       }
     );
   }
 
-  function search(){
+  function search() {
     console.log("自定义");
   }
 
   function callback(id) {
     javaex.optTip({
-      content : "数据提交中，请稍候...",
-      type : "submit"
+      content: "数据提交中，请稍候...",
+      type: "submit"
     });
 
     $.ajax({
-      url : "delete.json",
-      type : "POST",
-      dataType : "json",
-      data : {
-        "id" : id
+      url: "delete.json",
+      type: "POST",
+      dataType: "json",
+      data: {
+        "id": id
       },
-      success : function(rtn) {
-        if (rtn.code=="000000") {
+      success: function (rtn) {
+        if (rtn.code == "000000") {
           javaex.optTip({
-            content : rtn.message,
-            type : "success"
+            content: rtn.message,
+            type: "success"
           });
           // 建议延迟加载
-          setTimeout(function() {
+          setTimeout(function () {
             // 刷新页面
             window.location.reload();
           }, 2000);
         } else {
           javaex.optTip({
-            content : rtn.message,
-            type : "error"
+            content: rtn.message,
+            type: "error"
           });
         }
       }

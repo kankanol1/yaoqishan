@@ -10,7 +10,8 @@ public class AudioInfo {
 	private String name;		// 名称
 	private String url;		    // 路径
 	private String result;		// 结果集下载
-	private String images;		// 结果集下载
+	private String images;		// 抽帧图片
+	private String imagesc;		// 编译图片
 	private String sort;		// 排序用
 	private String template;	// 模板文件名
 	private String title;		// 标题
@@ -40,6 +41,12 @@ public class AudioInfo {
 	}
 	public void setImages(String images) {
 		this.images = images;
+	}
+	public String getImagesc() {
+		return imagesc;
+	}
+	public void setImagesc(String imagesc) {
+		this.imagesc = imagesc;
 	}
 	public String getResult() {
 		return result;
