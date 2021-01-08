@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50732
 File Encoding         : 65001
 
-Date: 2020-12-31 17:27:16
+Date: 2021-01-03 19:19:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,17 +20,18 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `activate_info`;
 CREATE TABLE `activate_info` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `type` varchar(50) NOT NULL,
   `code` varchar(50) NOT NULL,
   `create_time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of activate_info
 -- ----------------------------
+INSERT INTO `activate_info` VALUES ('6', '44', 'register', '649795', '2021-01-01 00:37:55');
 
 -- ----------------------------
 -- Table structure for api_info
@@ -71,23 +72,24 @@ CREATE TABLE `api_info` (
 -- ----------------------------
 DROP TABLE IF EXISTS `audio_info`;
 CREATE TABLE `audio_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `sort` int(11) NOT NULL,
-  `template` varchar(50) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `keywords` varchar(255) DEFAULT NULL,
-  `description` text,
-  `url` varchar(255) NOT NULL,
-  `result` varchar(255) DEFAULT NULL,
-  `images` varchar(10000) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '文件名称必须唯一',
+  `sort` int(11) NOT NULL COMMENT '排序字段暂时未用',
+  `template` varchar(50) DEFAULT NULL COMMENT '模板字段统一为 edit',
+  `title` varchar(255) DEFAULT NULL COMMENT '视频标题 默认为文件名称',
+  `keywords` varchar(255) DEFAULT NULL COMMENT '视频文件的关键字',
+  `description` text COMMENT '视频文件的描述信息',
+  `url` varchar(255) NOT NULL COMMENT '视频保存路径',
+  `result` varchar(255) DEFAULT NULL COMMENT '视频抽帧编译后的结果集压缩包',
+  `images` varchar(1000) DEFAULT NULL COMMENT '视频抽帧图片',
+  `imagesc` varchar(1000) DEFAULT NULL COMMENT '编译后的图片',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of audio_info
 -- ----------------------------
-INSERT INTO `audio_info` VALUES ('1', 'test.mp4', '2', 'edit', 'test.mp4', 'test.mp4', 'test.mp4视频描述', 'http://eways.gl-data.com:10009/test.mp4', 'http://eways.gl-data.com:10009/test.mp4', 'http://eways.gl-data.com:10009/1.png,http://eways.gl-data.com:10009/2.png,http://eways.gl-data.com:10009/3.png');
+INSERT INTO `audio_info` VALUES ('1', 'test.mp4', '2', 'edit', 'test.mp4', 'test.mp4', 'test.mp4视频描述', 'http://eways.gl-data.com:10009/test.mp4', 'http://eways.gl-data.com:10009/img.zip', 'http://eways.gl-data.com:10009/1.jpg,http://eways.gl-data.com:10009/2.jpg,http://eways.gl-data.com:10009/3.jpg,http://eways.gl-data.com:10009/4.jpg', 'http://eways.gl-data.com:10009/result1.png,http://eways.gl-data.com:10009/result2.png,http://eways.gl-data.com:10009/result3.png,http://eways.gl-data.com:10009/result4.png');
 
 -- ----------------------------
 -- Table structure for channel_info
@@ -157,6 +159,7 @@ CREATE TABLE `email_info` (
 -- ----------------------------
 -- Records of email_info
 -- ----------------------------
+INSERT INTO `email_info` VALUES ('1', 'smtp.163.com', '25', '18366104737@163.com', 'IIMBUMXBRGOFJFXB');
 
 -- ----------------------------
 -- Table structure for field_info
@@ -509,13 +512,13 @@ CREATE TABLE `user_info` (
   `group_name` varchar(255) DEFAULT NULL,
   `power` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user_info
 -- ----------------------------
 INSERT INTO `user_info` VALUES ('1', 'admin', '96e79218965eb72c92a549dd5a330112', '123456@qq.com', '2018-03-07 16:16:00', 'hidden', '2018-03-07 16:16:00', 'hidden', '1', null, null, null, null, null, null);
-INSERT INTO `user_info` VALUES ('22', 'usertest', '806b2af4633e64af88d33fbe4165a06a', 'usertest@qq.com', '2020-12-30 14:28:07', '127.0.0.1', '2020-12-30 14:28:07', '127.0.0.1', '1', null, null, null, null, null, null);
+INSERT INTO `user_info` VALUES ('45', 'usertest', '806b2af4633e64af88d33fbe4165a06a', '1317894008@qq.com', '2021-01-01 00:47:13', '39.78.19.216', '2021-01-01 00:47:13', '39.78.19.216', '1', null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for user_profile_info
@@ -529,13 +532,19 @@ CREATE TABLE `user_profile_info` (
   `sign_personal` varchar(255) DEFAULT NULL,
   `point` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user_profile_info
 -- ----------------------------
 INSERT INTO `user_profile_info` VALUES ('1', '1', '1', '', '', '0');
-INSERT INTO `user_profile_info` VALUES ('3', '22', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('20', '39', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('21', '40', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('22', '41', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('23', '42', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('24', '43', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('25', '44', '2', null, null, null);
+INSERT INTO `user_profile_info` VALUES ('26', '45', '2', null, null, null);
 
 -- ----------------------------
 -- Table structure for video_info
@@ -572,16 +581,16 @@ CREATE TABLE `video_info` (
 -- ----------------------------
 DROP TABLE IF EXISTS `web_info`;
 CREATE TABLE `web_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `domain` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `record_number` varchar(50) DEFAULT NULL,
   `statistical_code` text,
-  `id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of web_info
 -- ----------------------------
-INSERT INTO `web_info` VALUES (null, null, null, null, null, '1');
+INSERT INTO `web_info` VALUES ('1', 'gl-data', 'http://eways.gl-data.com:8080/yaoqishao/', '18366104737@163.com', '1', '1');

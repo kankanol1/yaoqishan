@@ -22,7 +22,6 @@ FLUSH PRIVILEGES;
 idea
 
 # 视频保存路径
-根目录下的 `upload`文件夹
 
 # 软件架构
 前端：javaex

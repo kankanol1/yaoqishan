@@ -10,6 +10,8 @@ public interface IAudioInfoDAO {
 	 * 查询频道栏目列表
 	 */
 	List<AudioInfo> list();
+	List<AudioInfo> selectByStatus(String status);
+
 
 	/**
 	 * 插入新的频道栏目

@@ -67,6 +67,7 @@ cn\javaex\yaoqishan\view\ApiInfo.class
 cn\javaex\yaoqishan\dao\qiniu_info\IQiniuInfoDAO.class
 cn\javaex\yaoqishan\service\api_info\ApiInfoService.class
 cn\javaex\yaoqishan\service\player_info\PlayerInfoService.class
+cn\javaex\yaoqishan\util\StatusDict.class
 cn\javaex\yaoqishan\view\ReplyInfo.class
 cn\javaex\yaoqishan\view\UserInfo.class
 cn\javaex\yaoqishan\interceptor\QingInterceptor.class

@@ -2,6 +2,7 @@ package cn.javaex.yaoqishan.action.audio_info;
 
 import cn.javaex.yaoqishan.service.audio_info.AudioInfoService;
 import cn.javaex.yaoqishan.service.template_info.TemplateInfoService;
+import cn.javaex.yaoqishan.util.StatusDict;
 import cn.javaex.yaoqishan.view.AudioInfo;
 import cn.javaex.yaoqishan.view.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,19 +29,43 @@ public class AudioInfoAction {
 	private TemplateInfoService templateInfoService;
 	
 	/**
-	 * 查询所有频道
+	 * 查询所有
 	 */
 	@RequestMapping("list.action")
 	public String list(ModelMap map) {
-		
 		List<AudioInfo> list = audioInfoService.list();
-		map.put("list", list);
-		
+		map.put("obj", StatusDict.getDict());
 		return "admin/audio_info/list";
 	}
+
+/*	@RequestMapping("status.action")
+	public String list(ModelMap map,
+					   HttpServletRequest request,
+					   @RequestParam(required=false, value="status") String status) {
+		List<AudioInfo> list = audioInfoService.selectByStatus(status);
+		map.put("list", list);
+		map.put("obj", objMap());
+		return "admin/audio_info/list";
+	}*/
+
+	/**
+	 * 通过编译状态查询
+	 */
+//	@RequestMapping("status.action")
+
+
+/*	public Map<String,String> objMap(){
+		Map<String,String> obj= new HashMap<String, String>();
+		obj.put("1","编译");
+		obj.put("2","编译中");
+		obj.put("3","编译成功");
+		obj.put("4","编译失败");
+		return  obj;
+	}*/
+
 	
 	/**
-	 * 编辑频道
+	 * 编辑
 	 */
 	@RequestMapping("edit.action")
 	public String edit(ModelMap map,
@@ -80,30 +105,35 @@ public class AudioInfoAction {
 	}
 	
 	/**
-	 * 保存频道内容
+	 * 保存
 	 */
 	@RequestMapping("save.json")
 	@ResponseBody
 	public Result save(AudioInfo audioInfo) {
 		
 		audioInfoService.save(audioInfo);
-		/*
-		*
-		* */
-		
 		return Result.success();
 	}
 	
 	/**
-	 * 删除频道
+	 * 删除
 	 */
 	@RequestMapping("delete.json")
 	@ResponseBody
-	public Result delete(
-			@RequestParam(required=false, value="id") String id) {
-		
+	public Result delete(@RequestParam(required=false, value="id") String id) {
+		AudioInfo audioInfo = audioInfoService.selectById(id);
 		audioInfoService.delete(id);
-		
+		try {
+			File file = new File(audioInfo.getUrl());
+			System.out.println(audioInfo.getUrl());
+			System.out.println(file.exists());
+			if(file.exists()) {
+				file.delete();
+				System.out.println("删除成功");
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		return Result.success();
 	}
 }

@@ -24,6 +24,7 @@ import org.python.core.PyInteger;
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,11 +34,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.alibaba.fastjson.JSONObject;
+
 //import com.wdg.util.BuildJsonOfObject;
 /*
-* https://blog.csdn.net/hanjun0612/article/details/78553086?utm_medium=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.control
-* https://blog.csdn.net/datouniao1/article/details/79716268/
-* */
+ * https://blog.csdn.net/hanjun0612/article/details/78553086?utm_medium=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-searchFromBaidu-3.control
+ * https://blog.csdn.net/datouniao1/article/details/79716268/
+ * */
 @RestController
 @RequestMapping("portal/audio")
 public class UploadFileController {
@@ -50,7 +52,6 @@ public class UploadFileController {
     }
 
 
-
     @RequestMapping(value = "audio.json", method = RequestMethod.POST)
     public String upload(@RequestParam("file") MultipartFile files, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject json = new JSONObject();
@@ -60,45 +61,37 @@ public class UploadFileController {
         log.info("-------------------start upload-------------------");
         try {
             String name = files.getOriginalFilename();
-            String path = this.getClass().getClassLoader().getResource("/").getPath();
-
-            if(audioInfoService.selectByName("name")!=null){
-                json.put("msg","视频已经存在");
+            String[] arr = name.split("\\.");
+            if (audioInfoService.selectByName(arr[0]) != null) {
+                json.put("msg", "视频已经存在");
                 return JSONObject.toJSON(json).toString();
             }
-
-
-                int index = path.indexOf("yaoqishan");
-
-            path = path.substring(1, index + "yaoqishan".length()) + "/upload/";
-            String python =path.substring(1, index + "yaoqishan".length()) + "/python/";
-            path = path + name;
-            System.out.println(path);
+            String basePath = "/var/www/website/upload/" + arr[0] + "/";
+            String path = basePath + name;
+            File file1 = new File( basePath);
+            File file2 = new File(basePath + "input/");
+            File file3 = new File(basePath + "output/");
+            if (!file1.exists()) {
+                file1.mkdirs();//多层目录需要调用mkdirs
+            }if (!file2.exists()) {
+                file2.mkdirs();
+            }if (!file3.exists()) {
+                file3.mkdirs();
+            }
             File uploadFile = new File(path);
             files.transferTo(uploadFile);
-            AudioInfo audioInfo =new AudioInfo();
-            audioInfo.setName(name);
+            AudioInfo audioInfo = new AudioInfo();
+            audioInfo.setName(arr[0]);
             audioInfo.setTemplate("edit");
             audioInfo.setTitle(name);
             audioInfo.setSort("1");
+            audioInfo.setStatus("1");
             audioInfo.setUrl(path);
             audioInfo.setResult(path);
             audioInfo.setKeywords(name);
-            audioInfo.setDescription(name+"视频描述");
-
-            /*
-            *https://www.cnblogs.com/wuwuyong/p/10600749.html
-            *
-            * */
-            PythonInterpreter interpreter = new PythonInterpreter();
-            interpreter.execfile("F:\\java\\yaoqishan\\python\\test.py");
-            PyFunction pyFunction = interpreter.get("add", PyFunction.class);
-            int a = 5, b = 10;
-            //调用函数，如果函数需要参数，在Java中必须先将参数转化为对应的“Python类型”
-            PyObject pyobj = pyFunction.__call__(new PyInteger(a), new PyInteger(b));
-            System.out.println("the anwser is: " + pyobj);
-
+            audioInfo.setDescription(name + "视频描述");
             audioInfoService.save(audioInfo);
+
             json.put("url", path);
         } catch (Exception e) {
             msg = "error";
@@ -108,16 +101,23 @@ public class UploadFileController {
         return JSONObject.toJSON(json).toString();
     }
 
-	/*private byte[] inputStreamToByte(InputStream is) throws IOException {
-		ByteArrayOutputStream bAOutputStream = new ByteArrayOutputStream();
-		int ch;
-		while ((ch = is.read()) != -1) {
-			bAOutputStream.write(ch);
-		}
-		byte data[] = bAOutputStream.toByteArray();
-		bAOutputStream.close();
-		return data;
-	}*/
+    @RequestMapping(value = "status.json", method = RequestMethod.POST)
+    public String status(@RequestParam(required = false, value = "id") String id, HttpServletRequest request, HttpServletResponse response) {
+        List<AudioInfo> audioInfo = audioInfoService.selectByStatus("2");
+        JSONObject json = new JSONObject();
+        response.setCharacterEncoding("utf-8");
+        if (audioInfo.size() > 0) {
+            json.put("msg", "已有视频在编译中，请稍后重试...");
+            json.put("code", "000000");
+        } else {
+            AudioInfo audioInfo1 = audioInfoService.selectById(id);
+            audioInfo1.setStatus("2");
+            audioInfoService.save(audioInfo1);
+            json.put("msg", "视频进入编译阶段，请稍后查看...");
+            json.put("code", "000001");
+        }
+        return JSONObject.toJSON(json).toString();
+    }
 
     @RequestMapping(value = "/uploadservlet", method = RequestMethod.POST, produces = "text/html;charset=utf-8")
     protected String uploadServlet(HttpServletRequest request, HttpServletResponse response)

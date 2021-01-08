@@ -13,6 +13,7 @@ public class AudioInfo {
 	private String images;		// 抽帧图片
 	private String imagesc;		// 编译图片
 	private String sort;		// 排序用
+	private String status;		// 编译状态
 	private String template;	// 模板文件名
 	private String title;		// 标题
 	private String keywords;	// 关键字
@@ -56,6 +57,12 @@ public class AudioInfo {
 	}
 	public String getSort() {
 		return sort;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getStatus() {
+		return status;
 	}
 	public void setSort(String sort) {
 		this.sort = sort;

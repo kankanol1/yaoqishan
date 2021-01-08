@@ -89,7 +89,11 @@ https://www.jb51.net/article/142736.htm
       });
 
 
-    uploader.on('uploadSuccess', function(file) {
+    uploader.on('uploadSuccess', function(file,response) {
+     /* javaex.optTip({
+        content: response.msg,
+        type: "success"
+      });*/
       $('#' + file.id).find('p.state').text('已上传');
     });
 

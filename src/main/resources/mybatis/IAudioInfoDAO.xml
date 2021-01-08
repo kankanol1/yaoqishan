@@ -12,6 +12,7 @@
         <result column="images" property="images"/>
         <result column="imagesc" property="imagesc"/>
         <result column="sort" property="sort"/>
+        <result column="status" property="status"/>
         <result column="template" property="template"/>
         <result column="title" property="title"/>
         <result column="keywords" property="keywords"/>
@@ -37,14 +38,24 @@
 		WHERE
 			id = #{id}
 	</select>
-    <!-- 根据主键查询视频信息 -->
+    <!-- 根据编译状态信息 -->
+    <select id="selectByStatus" resultMap="AudioInfoMap">
+		SELECT
+			*
+		FROM
+			audio_info
+		WHERE
+			status = #{status}
+
+	</select>
+    <!-- 根据名称查询视频信息 -->
     <select id="selectByName" resultMap="AudioInfoMap">
 		SELECT
 			*
 		FROM
 			audio_info
 		WHERE
-			id = #{name}
+			name = #{name}
 	</select>
 
     <!-- 插入新的视频 -->
@@ -57,6 +68,7 @@
             <if test="images!=null and images!=''">images,</if>
             <if test="imagesc!=null and imagesc!=''">imagesc,</if>
             <if test="sort!=null and sort!=''">sort,</if>
+            <if test="status!=null and status!=''">status,</if>
             <if test="template!=null and template!=''">template,</if>
             <if test="title!=null and title!=''">title,</if>
             <if test="keywords!=null and keywords!=''">keywords,</if>
@@ -69,6 +81,7 @@
             <if test="images!=null and images!=''">#{images},</if>
             <if test="imagesc!=null and imagesc!=''">#{imagesc},</if>
             <if test="sort!=null and sort!=''">#{sort},</if>
+            <if test="status!=null and status!=''">#{status},</if>
             <if test="template!=null and template!=''">#{template},</if>
             <if test="title!=null and title!=''">#{title},</if>
             <if test="keywords!=null and keywords!=''">#{keywords},</if>
@@ -91,6 +104,7 @@
             <if test="images!=null">images=#{images},</if>
             <if test="imagesc!=null">imagesc=#{imagesc},</if>
             <if test="sort!=null">sort=#{sort},</if>
+            <if test="status!=null">status=#{status},</if>
             <if test="template!=null">template=#{template},</if>
             <if test="title!=null">title=#{title},</if>
             <if test="keywords!=null">keywords=#{keywords},</if>

@@ -156,7 +156,7 @@
 						// 建议延迟加载
 						setTimeout(function() {
 							// 跳转页面
-							window.location.href = "list.action";
+							window.location.href = "${pageContext.request.contextPath}/portal/results.action";
 						}, 2000);
 					} else {
 						javaex.optTip({

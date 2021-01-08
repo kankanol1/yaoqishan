@@ -12,49 +12,70 @@ import java.util.List;
 
 @Service("AudioInfoService")
 public class AudioInfoService {
-	@Autowired
-	private IAudioInfoDAO iAudioInfoDAO;
-	@Autowired
-	private INavInfoDAO iNavInfoDAO;
-	
-	/**
-	 * 查询频道列表
-	 */
-	public List<AudioInfo> list() {
-		return iAudioInfoDAO.list();
-	}
+    @Autowired
+    private IAudioInfoDAO iAudioInfoDAO;
+    @Autowired
+    private INavInfoDAO iNavInfoDAO;
 
-	/**
-	 * 根据主键查询频道信息
-	 * @param id 主键
-	 * @return
-	 */
-	public AudioInfo selectById(String id) {
-		if (StringUtils.isEmpty(id)) {
-			return null;
-		}
-		
-		return iAudioInfoDAO.selectById(id);
-	}
-	public AudioInfo selectByName(String name) {
-		if (StringUtils.isEmpty(name)) {
-			return null;
-		}
+    /**
+     * 查询视频列表
+     */
+    public List<AudioInfo> list() {
+        return iAudioInfoDAO.list();
+    }
 
-		return iAudioInfoDAO.selectByName(name);
-	}
+    /**
+     * 根据主键查询视频信息
+     *
+     * @param id 主键
+     * @return
+     */
+    public AudioInfo selectById(String id) {
+        if (StringUtils.isEmpty(id)) {
+            return null;
+        }
 
-	/**
-	 * 保存频道内容
-	 * @param audioInfo
-	 */
-	public void save(AudioInfo audioInfo) {
-		// 判断是新增还是更新
-		if (StringUtils.isEmpty(audioInfo.getId())) {
-			// 新增
-			iAudioInfoDAO.insert(audioInfo);
-			
-			// 添加进导航
+        return iAudioInfoDAO.selectById(id);
+    }
+
+    /**
+     * 根据名称查询视频信息
+     *
+     * @param name 主键
+     * @return
+     */
+    public AudioInfo selectByName(String name) {
+        if (StringUtils.isEmpty(name)) {
+            return null;
+        }
+        return iAudioInfoDAO.selectByName(name);
+    }
+
+    /**
+     * 根据编译状态查询视频信息
+     *
+     * @param status 主键
+     * @return
+     */
+    public List<AudioInfo> selectByStatus(String status) {
+        if (StringUtils.isEmpty(status)) {
+            return null;
+        }
+        return iAudioInfoDAO.selectByStatus(status);
+    }
+
+    /**
+     * 保存视频内容
+     *
+     * @param audioInfo
+     */
+    public void save(AudioInfo audioInfo) {
+        // 判断是新增还是更新
+        if (StringUtils.isEmpty(audioInfo.getId())) {
+            // 新增
+            iAudioInfoDAO.insert(audioInfo);
+
+            // 添加进导航
 //			NavInfo navInfo = new NavInfo();
 //			navInfo.setSort("1");
 //			navInfo.setName(audioInfo.getName());
@@ -63,31 +84,32 @@ public class AudioInfoService {
 //			navInfo.setIsUse("1");
 //			navInfo.setType("system");
 //			navInfo.setChannelId(audioInfo.getId());
-			
+
 //			iNavInfoDAO.insert(navInfo);
-		} else {
-			// 更新
-			iAudioInfoDAO.update(audioInfo);
-			
-			// 更新导航
+        } else {
+            // 更新
+            iAudioInfoDAO.update(audioInfo);
+
+            // 更新导航
 //			NavInfo navInfo = new NavInfo();
 //			navInfo.setName(audioInfo.getName());
 //			navInfo.setChannelId(audioInfo.getId());
-			
-//			iNavInfoDAO.updateByChannel(navInfo);
-		}
-	}
 
-	/**
-	 * 删除频道
-	 * @param id
-	 */
-	public void delete(String id) {
-		// 删除频道
-		iAudioInfoDAO.delete(id);
-		
-		// 删除导航中对应的链接
+//			iNavInfoDAO.updateByChannel(navInfo);
+        }
+    }
+
+    /**
+     * 删除视频
+     *
+     * @param id
+     */
+    public void delete(String id) {
+        // 删除视频
+        iAudioInfoDAO.delete(id);
+
+        // 删除导航中对应的链接
 //		iNavInfoDAO.deleteByChannelId(id);
-	}
+    }
 
 }
