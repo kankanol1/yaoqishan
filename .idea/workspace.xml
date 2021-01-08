@@ -8,31 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="399d7f60-cf31-4ca2-8125-43df694a107e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sq_173cms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sq_173cms.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/AudioInfoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/AudioInfoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/portal/PortalAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/audio_info/IAudioInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/dao/audio_info/IAudioInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/service/audio_info/AudioInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/service/audio_info/AudioInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/view/AudioInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/IAudioInfoDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/IAudioInfoDAO.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/m/js/javaex.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/m/js/javaex.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/pc/js/javaex.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/default/javaex/pc/js/javaex.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/IAudioInfoDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/IAudioInfoDAO.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yaoqishao/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IAudioInfoDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/classes/mybatis/IAudioInfoDAO.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/audio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/results.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yaoqishao/WEB-INF/page/portal/pc/template/default/audio/results.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/js/javaex.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/yaoqishao/static/default/javaex/pc/js/javaex.min.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="74" column="30" lean-forward="true" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+            <state relative-caret-position="311">
+              <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1750#1751#0" expanded="true" />
@@ -76,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-481">
-              <caret line="401" column="27" selection-start-line="401" selection-start-column="27" selection-end-line="401" selection-end-column="27" />
+            <state relative-caret-position="252">
+              <caret line="412" column="39" selection-start-line="412" selection-start-column="39" selection-end-line="412" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -113,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README_source.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="220">
+              <first_editor relative-caret-position="296">
                 <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               </first_editor>
               <second_editor />
@@ -150,8 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>execfile</find>
-      <find>delete</find>
       <find>succes</find>
       <find>加载</find>
       <find>uploadSuccess</find>
@@ -180,6 +157,8 @@
       <find>optTip</find>
       <find>ajax</find>
       <find>resetCom</find>
+      <find>goPython</find>
+      <find>window</find>
     </findStrings>
     <replaceStrings>
       <replace>sq_173cms</replace>
@@ -244,10 +223,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/common/commons.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/default/js/javaex.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/default/javaex/pc/js/javaex.min.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/README_source.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp" />
       </list>
     </option>
   </component>
@@ -288,7 +267,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
+    <option name="x" value="78" />
+    <option name="y" value="90" />
     <option name="width" value="1317" />
     <option name="height" value="715" />
   </component>
@@ -303,6 +283,16 @@
             <path>
               <item name="yaoqishan" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="yaoqishan" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="yaoqishan" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="yaoqishan" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="yaoqishan" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="yaoqishan" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -541,12 +531,12 @@
       <workItem from="1609935230952" duration="1031000" />
       <workItem from="1609979706705" duration="87000" />
       <workItem from="1609980034780" duration="176000" />
-      <workItem from="1609981114521" duration="39998000" />
+      <workItem from="1609981114521" duration="42486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182240000" />
+    <option name="totallyTimeSpent" value="184728000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -558,10 +548,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="0" width="1317" height="715" extended-state="0" />
-    <editor active="true" />
+    <frame x="78" y="90" width="1317" height="715" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.2140016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.26650757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -573,14 +562,14 @@
       <window_info id="Alibaba Cloud Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32553956" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30464715" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3545611" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47846153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3274648" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3274648" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.375" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.37349397" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32899627" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -593,7 +582,7 @@
       <window_info anchor="bottom" id="PyCrunch Timeline" order="19" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.124042876" />
-      <window_info anchor="right" id="Maven" order="2" weight="0.15513127" />
+      <window_info anchor="right" id="Maven" order="2" visible="true" weight="0.15513127" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" weight="0.3295626" />
@@ -1194,10 +1183,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="24" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README_source.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="296">
+            <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/javaex/yaoqishan/action/audio_info/UploadFileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="74" column="30" lean-forward="true" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+        <state relative-caret-position="311">
+          <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1750#1751#0" expanded="true" />
@@ -1209,8 +1218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/portal/pc/template/default/audio/results.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-481">
-          <caret line="401" column="27" selection-start-line="401" selection-start-column="27" selection-end-line="401" selection-end-column="27" />
+        <state relative-caret-position="252">
+          <caret line="412" column="39" selection-start-line="412" selection-start-column="39" selection-end-line="412" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#head#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -1227,26 +1236,6 @@
             <element signature="e#7568#7597#0#HTML" />
             <element signature="e#7623#8278#0#HTML" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="198">
-            <caret line="24" selection-start-line="24" selection-end-line="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README_source.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="220">
-            <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

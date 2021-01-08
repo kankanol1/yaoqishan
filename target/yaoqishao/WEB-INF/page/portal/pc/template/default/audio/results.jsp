@@ -192,7 +192,7 @@
               </c:choose>
               </tbody>
             </table>
-<%--            <button class="button pink" onclick="goPython(12)">测试</button>--%>
+            <button class="button pink" onclick="goPython(12)">id12编译完成（测试）</button>
           </div>
         </div>
       </div>
@@ -365,18 +365,12 @@
               content: rtn.msg,
               type: "success"
             });
-           /* // 建议延迟加载
-            setTimeout(function () {
-              // 刷新页面
-              window.location.reload();
-            }, 2000);*/
           }else if(rtn.code=="000001"){
             javaex.optTip({
               content: rtn.msg,
               type: "success"
             });
-            goPython(id);
-
+              goPython(id);
             // 建议延迟加载
             setTimeout(function () {
               // 刷新页面
@@ -415,6 +409,9 @@
               content: rtn.msg,
               type: "success"
             });
+            setTimeout(function(){
+              window.location.reload();
+            },2000)
           }else  {
             javaex.optTip({
               content: rtn.msg,
